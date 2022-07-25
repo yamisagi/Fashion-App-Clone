@@ -2,6 +2,7 @@ import 'package:fashion_app/constant/constant.dart';
 import 'package:fashion_app/theme/theme.dart';
 import 'package:fashion_app/page/main_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(const FashionApp());
 
@@ -22,9 +23,11 @@ class _FashionAppState extends State<FashionApp> {
       theme: _darkTheme
           ? theme = ProductTheme.darkTheme
           : theme = ProductTheme.lightTheme,
-      title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
+          systemOverlayStyle: _darkTheme
+              ? SystemUiOverlayStyle.light
+              : SystemUiOverlayStyle.dark,
           title: Constant.appBarTitle,
           actions: [
             IconButton(
@@ -37,7 +40,7 @@ class _FashionAppState extends State<FashionApp> {
             ),
           ],
         ),
-        body: MainScreen(),
+        body: const MainScreen(),
       ),
     );
   }
