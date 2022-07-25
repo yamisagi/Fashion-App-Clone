@@ -59,7 +59,11 @@ In this project, I am trying to create a clone Fashion App.
 <!-- ROADMAP -->
 ## Roadmap
 
-* [x] This is the beginning of the project.
+* [x] Created [HeaderModel](lib/model/header_model.dart)
+* [x] Created [Constant](lib/constant/constant.dart)
+* [x] Created [Theme](lib/theme/theme.dart)
+* [x] Created [MainScreen](lib/page/main_screen.dart)
+* [x] Added adaptive Theme in [FashionApp](lib/main.dart)
 
   - I will update this later
 
