@@ -7,6 +7,9 @@ class Constant {
   static const fontFamily = 'Montserrat';
   static const appBarTitle = Text('Fashion App');
   static const avatarImage = 'assets/ic_model5.jpeg';
+  static const cardItemImage = 'assets/ic_modelgrid1.jpeg';
+  static const cardItemImage2 = 'assets/ic_modelgrid2.jpeg';
+  static const cardItemImage3 = 'assets/ic_modelgrid3.jpeg';
 
   ///-----------------STYLE-----------------///
   static const headerFontStyle = TextStyle(
@@ -28,6 +31,7 @@ class Constant {
   static const circleAvatarMinRadius = 30.0;
   static const headerCardRadius =
       EdgeInsets.only(bottom: 20, left: 10, right: 10);
+  static const itemPadding = EdgeInsets.all(12);
 
   ///-----------------MODEL LIST-----------------///
   static final modelList = [
@@ -68,35 +72,42 @@ class Constant {
       modelDescription: '5 min ago',
       modelImage: 'assets/ic_model5.jpeg',
       time: '5 min ago',
+      cardImage: cardItemImage
     ),
     ItemModel(
       modelName: 'Sarah',
       modelDescription: '10 min ago',
       modelImage: 'assets/ic_model1.jpeg',
       time: '10 min ago',
+      cardImage: cardItemImage2
     ),
     ItemModel(
       modelName: 'Emmet',
       modelDescription: '25 min ago',
       modelImage: 'assets/ic_model2.jpeg',
       time: '25 min ago',
+      cardImage: cardItemImage3
     ),
     ItemModel(
       modelName: 'Jane',
       modelDescription: '32 min ago',
       modelImage: 'assets/ic_model3.jpeg',
       time: '32 min ago',
+      cardImage: cardItemImage
     ),
     ItemModel(
       modelName: 'Angelina',
       modelDescription: '40 min ago',
       modelImage: 'assets/ic_model4.jpg',
       time: '40 min ago',
-    ),ItemModel(
+      cardImage: cardItemImage2
+    ),
+    ItemModel(
       modelName: 'Kira',
       modelDescription: '55 min ago',
       modelImage: 'assets/ic_model6.jpg',
       time: '55 min ago',
+      cardImage: cardItemImage3
     ),
   ];
 }

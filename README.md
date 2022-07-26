@@ -68,6 +68,9 @@ In this project, I am trying to create a clone Fashion App.
 * [x] Improved [AvatarList](lib/widget/header.dart) with InkWell.
 * [x] Created [ProductNavBar](lib/widget/product_nav_bar.dart)
 * [x] Fixed [FashionApp](main)'s AppBar's scrolledUnderElevation.
+* [x] Created [ItemCard](lib/product/item_card.dart)
+* [x] Created [ItemListTile](lib/product/item_listtile.dart)
+* [x] Created [ItemModel](lib/model/item_model.dart)
 
   - I will update this later
 

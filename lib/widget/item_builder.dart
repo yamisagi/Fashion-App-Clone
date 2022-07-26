@@ -1,4 +1,6 @@
 import 'package:fashion_app/model/item_model.dart';
+import 'package:fashion_app/product/item_card.dart';
+import 'package:fashion_app/product/item_listtile.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/constant.dart';
@@ -15,27 +17,16 @@ class ItemListBuilder extends StatelessWidget {
         return Card(
           elevation: 0,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ListTile(
-                leading: CircleAvatar(
-                  radius: Constant.circleAvatarMinRadius,
-                  backgroundImage: AssetImage(itemList[index].modelImage),
-                ),
-                title: Text(
-                  itemList[index].modelName,
-                  style: Constant.followButtonHeaderFontStyle,
-                ),
-                subtitle: Text(
-                  itemList[index].modelDescription,
-                  style: Constant.followButtonDescriptionFontStyle,
-                ),
-                trailing: IconButton(
-                  icon: const Icon(Icons.more_vert),
-                  onPressed: () {},
-                ),
-              ),
-              const Placeholder(
-                fallbackHeight: 300,
+              ItemListTile(itemList: itemList, index: index),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ItemCard(
+                    itemImagePath: itemList[index].cardImage,
+                  ),
+                ],
               )
             ],
           ),
