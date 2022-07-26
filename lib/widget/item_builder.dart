@@ -101,6 +101,7 @@ class _ItemListBuilderState extends State<ItemListBuilder> {
           context,
           MaterialPageRoute(
               builder: (context) => DetailPage(
+                    itemList: widget.itemList,
                     index: index,
                     heroTag: heroTag,
                     imagePath: imagePath,
@@ -124,6 +125,7 @@ class _ItemListBuilderState extends State<ItemListBuilder> {
           context,
           MaterialPageRoute(
               builder: (context) => DetailPage(
+                    itemList: widget.itemList,
                     index: index,
                     heroTag: widget.itemList[index].uniqueId,
                     imagePath: widget.itemList[index].cardImage,

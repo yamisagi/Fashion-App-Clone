@@ -1,4 +1,5 @@
 import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/page/profile_page.dart';
 import 'package:fashion_app/theme/theme.dart';
 import 'package:fashion_app/page/main_screen.dart';
 import 'package:fashion_app/widget/bottom_nav_bar.dart';
@@ -18,6 +19,8 @@ class _FashionAppState extends State<FashionApp> {
   Icon darkIcon = const Icon(Icons.dark_mode);
   Icon lightIcon = const Icon(Icons.light_mode);
   bool _darkTheme = true;
+  int _currentIndex = 0;
+  List<Widget> pages = [MainScreen(), const ProfilePage()];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +28,12 @@ class _FashionAppState extends State<FashionApp> {
       theme: _darkTheme ? ProductTheme.darkTheme : ProductTheme.lightTheme,
       home: Scaffold(
         bottomNavigationBar: ProductNavBar(
+          currentIndex: _currentIndex,
+          onItemSelected: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
           fixedColor: _darkTheme
               ? Constant.darkThemeIconColor
               : Constant.lightThemeIconColor,
@@ -45,7 +54,7 @@ class _FashionAppState extends State<FashionApp> {
             ),
           ],
         ),
-        body: MainScreen(),
+        body: pages[_currentIndex],
       ),
     );
   }

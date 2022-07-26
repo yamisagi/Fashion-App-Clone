@@ -12,7 +12,11 @@ class ItemModel {
   String uniqueId;
   String uniqueId2;
   String uniqueId3;
-  List<String> ids;
+  String dress;
+  String dressDescription;
+  String dressTitle;
+  String dressSubtitle;
+  String dressPrice;
 
   ItemModel({
     required this.modelName,
@@ -28,6 +32,10 @@ class ItemModel {
     required this.uniqueId,
     required this.uniqueId2,
     required this.uniqueId3,
-    required this.ids,
+    required this.dress,
+    required this.dressDescription,
+    required this.dressTitle,
+    required this.dressSubtitle,
+    required this.dressPrice,
   });
 }

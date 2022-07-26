@@ -2,14 +2,20 @@ import 'package:flutter/material.dart';
 
 class ProductNavBar extends StatefulWidget {
   final Color? fixedColor;
-  const ProductNavBar({super.key, required this.fixedColor});
+  final ValueChanged<int>? onItemSelected;
+  int currentIndex;
+  ProductNavBar({
+    super.key,
+    required this.fixedColor,
+    required this.onItemSelected,
+    required this.currentIndex,
+  });
 
   @override
   State<ProductNavBar> createState() => ProductNavBarState();
 }
 
 class ProductNavBarState extends State<ProductNavBar> {
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
@@ -17,24 +23,12 @@ class ProductNavBarState extends State<ProductNavBar> {
       type: BottomNavigationBarType.shifting,
       unselectedIconTheme: IconThemeData(color: widget.fixedColor),
       fixedColor: widget.fixedColor,
-      onTap: (value) {
-        setState(() {
-          _currentIndex = value;
-        });
-      },
-      currentIndex: _currentIndex,
+      onTap: widget.onItemSelected,
+      currentIndex: widget.currentIndex,
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.search),
-          label: 'Search',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
-          label: 'Cart',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
