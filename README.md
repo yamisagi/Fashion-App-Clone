@@ -71,6 +71,8 @@ In this project, I am trying to create a clone Fashion App.
 * [x] Created [ItemCard](lib/product/item_card.dart)
 * [x] Created [ItemListTile](lib/product/item_listtile.dart)
 * [x] Created [ItemModel](lib/model/item_model.dart)
+* [x] Created [DetailPage](lib/page/detail_page.dart)
+* [x] Improved Hero Animation in [DetailPage](lib/page/detail_page.dart)
 
   - I will update this later
 

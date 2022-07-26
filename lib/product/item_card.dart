@@ -5,14 +5,18 @@ class ItemCard extends StatelessWidget {
   const ItemCard({
     Key? key,
     required this.itemImagePath,
+    required this.boxHeight,
+    required this.boxWidth,
   }) : super(key: key);
   final String itemImagePath;
+  final double boxHeight;
+  final double boxWidth;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
-      width: MediaQuery.of(context).size.width / 2,
+      height: boxHeight,
+      width: boxWidth,
       child: Card(
         clipBehavior: Clip.antiAliasWithSaveLayer,
         color: Colors.black,
