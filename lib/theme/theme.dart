@@ -3,28 +3,38 @@ import 'package:flutter/material.dart';
 
 class ProductTheme {
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
-    useMaterial3: true,
-    appBarTheme: const AppBarTheme(
-      centerTitle: true,
-      elevation: 0,
-      color: Colors.transparent,
-      titleTextStyle: TextStyle(
-        color: Colors.white,
-        fontSize: 30,
-        fontFamily: Constant.fontFamily,
-      ),
+    cardTheme: CardTheme(
+      elevation: 2,
+      color: Colors.purple[200],
     ),
-  );
-  static final ThemeData lightTheme = ThemeData.light().copyWith(
     useMaterial3: true,
     appBarTheme: const AppBarTheme(
       centerTitle: false,
       elevation: 0,
       color: Colors.transparent,
       titleTextStyle: TextStyle(
-        color: Colors.black,
+        color: Colors.white,
         fontSize: 30,
         fontFamily: Constant.fontFamily,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  );
+  static final ThemeData lightTheme = ThemeData.light().copyWith(
+    useMaterial3: true,
+    cardTheme: CardTheme(
+      elevation: 2,
+      color: Colors.orange[100],
+    ),
+    appBarTheme: AppBarTheme(
+      centerTitle: false,
+      elevation: 0,
+      color: Colors.transparent,
+      titleTextStyle: TextStyle(
+        color: Colors.grey[700],
+        fontSize: 30,
+        fontFamily: Constant.fontFamily,
+        fontWeight: FontWeight.bold,
       ),
     ),
   );

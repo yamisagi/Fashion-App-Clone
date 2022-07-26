@@ -64,6 +64,8 @@ In this project, I am trying to create a clone Fashion App.
 * [x] Created [Theme](lib/theme/theme.dart)
 * [x] Created [MainScreen](lib/page/main_screen.dart)
 * [x] Added adaptive Theme in [FashionApp](lib/main.dart)
+* [x] Improved code in [FashionApp](lib/main.dart) and added adaptive icon.
+* [x] Improved [AvatarList](lib/widget/header.dart) with InkWell.
 
   - I will update this later
 

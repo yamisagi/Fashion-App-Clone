@@ -14,15 +14,14 @@ class FashionApp extends StatefulWidget {
 }
 
 class _FashionAppState extends State<FashionApp> {
-  ThemeData theme = ProductTheme.darkTheme;
+  Icon darkIcon = const Icon(Icons.dark_mode);
+  Icon lightIcon = const Icon(Icons.light_mode);
   bool _darkTheme = true;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: _darkTheme
-          ? theme = ProductTheme.darkTheme
-          : theme = ProductTheme.lightTheme,
+      theme: _darkTheme ? ProductTheme.darkTheme : ProductTheme.lightTheme,
       home: Scaffold(
         appBar: AppBar(
           systemOverlayStyle: _darkTheme
@@ -31,7 +30,7 @@ class _FashionAppState extends State<FashionApp> {
           title: Constant.appBarTitle,
           actions: [
             IconButton(
-              icon: const Icon(Icons.brightness_6),
+              icon: _darkTheme ? lightIcon : darkIcon,
               onPressed: () {
                 setState(() {
                   _darkTheme = !_darkTheme;
@@ -40,7 +39,7 @@ class _FashionAppState extends State<FashionApp> {
             ),
           ],
         ),
-        body: const MainScreen(),
+        body: MainScreen(),
       ),
     );
   }
