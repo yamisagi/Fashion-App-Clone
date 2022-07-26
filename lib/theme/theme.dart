@@ -9,6 +9,7 @@ class ProductTheme {
     ),
     useMaterial3: true,
     appBarTheme: const AppBarTheme(
+      scrolledUnderElevation: 0,
       centerTitle: false,
       elevation: 0,
       color: Colors.transparent,
@@ -27,6 +28,7 @@ class ProductTheme {
       color: Colors.orange[100],
     ),
     appBarTheme: AppBarTheme(
+      scrolledUnderElevation: 0,
       centerTitle: false,
       elevation: 0,
       color: Colors.transparent,

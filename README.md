@@ -67,6 +67,7 @@ In this project, I am trying to create a clone Fashion App.
 * [x] Improved code in [FashionApp](lib/main.dart) and added adaptive icon.
 * [x] Improved [AvatarList](lib/widget/header.dart) with InkWell.
 * [x] Created [ProductNavBar](lib/widget/product_nav_bar.dart)
+* [x] Fixed [FashionApp](main)'s AppBar's scrolledUnderElevation.
 
   - I will update this later
 

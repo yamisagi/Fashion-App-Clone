@@ -61,6 +61,7 @@ class AvatarList extends StatelessWidget {
       onTap: (() => showDialog(
           context: context, builder: ((context) => _dialog(index, context)))),
       child: Card(
+        elevation: 0,
         margin: Constant.headerCardMargin,
         child: Padding(
           padding: Constant.headerCardPadding,

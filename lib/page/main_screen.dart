@@ -2,16 +2,17 @@
 
 import 'package:fashion_app/constant/constant.dart';
 import 'package:fashion_app/widget/header.dart';
+import 'package:fashion_app/widget/item_builder.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);
 
   final headerList = Constant.modelList;
-
+  final itemList = Constant.itemList;
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.min, children: [
+    return Column(children: [
       Expanded(
         flex: 1,
         child: AvatarList(
@@ -20,11 +21,8 @@ class MainScreen extends StatelessWidget {
       ),
       Expanded(
           flex: 2,
-          child: Padding(
-            padding: Constant.headerCardRadius,
-            child: Card(
-              child: Container(),
-            ),
+          child: ItemListBuilder(
+            itemList: itemList,
           ))
     ]);
   }

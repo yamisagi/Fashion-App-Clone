@@ -13,6 +13,7 @@ class ProductNavBarState extends State<ProductNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      elevation: 0,
       type: BottomNavigationBarType.shifting,
       unselectedIconTheme: IconThemeData(color: widget.fixedColor),
       fixedColor: widget.fixedColor,
