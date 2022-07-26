@@ -11,12 +11,21 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(mainAxisSize: MainAxisSize.min, children: [
       Expanded(
+        flex: 1,
         child: AvatarList(
           headerList: headerList,
         ),
-      )
+      ),
+      Expanded(
+          flex: 2,
+          child: Padding(
+            padding: Constant.headerCardRadius,
+            child: Card(
+              child: Container(),
+            ),
+          ))
     ]);
   }
 }

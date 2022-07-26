@@ -1,6 +1,7 @@
 import 'package:fashion_app/constant/constant.dart';
 import 'package:fashion_app/theme/theme.dart';
 import 'package:fashion_app/page/main_screen.dart';
+import 'package:fashion_app/widget/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -23,6 +24,11 @@ class _FashionAppState extends State<FashionApp> {
       debugShowCheckedModeBanner: false,
       theme: _darkTheme ? ProductTheme.darkTheme : ProductTheme.lightTheme,
       home: Scaffold(
+        bottomNavigationBar: ProductNavBar(
+          fixedColor: _darkTheme
+              ? Constant.darkThemeIconColor
+              : Constant.lightThemeIconColor,
+        ),
         appBar: AppBar(
           systemOverlayStyle: _darkTheme
               ? SystemUiOverlayStyle.light

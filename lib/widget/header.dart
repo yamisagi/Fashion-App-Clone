@@ -13,6 +13,7 @@ class AvatarList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
       scrollDirection: Axis.horizontal,
       itemCount: headerList.length,
       itemBuilder: ((context, index) {
@@ -82,10 +83,6 @@ class AvatarList extends StatelessWidget {
         style: Constant.followButtonDescriptionFontStyle,
       ),
       actions: [
-        TextButton(
-          onPressed: () => Navigator.pop(context),
-          child: const Text('Follow'),
-        ),
         TextButton(
           onPressed: () => Navigator.pop(context),
           child: const Text('Close'),

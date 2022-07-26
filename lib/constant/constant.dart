@@ -15,11 +15,16 @@ class Constant {
       TextStyle(fontWeight: FontWeight.w600, fontFamily: Constant.fontFamily);
 
   ///-----------------COLOR-----------------///
+  static final lightThemeIconColor = Colors.orange[400];
+  static final darkThemeIconColor = Colors.purple[500];
+
   ///-----------------RADIUS&PADDING-----------------///
   static const headerCardMargin = EdgeInsets.all(12);
   static const headerCardPadding = EdgeInsets.all(5.0);
   static const circleAvatarRadius = 50.0;
   static const circleAvatarLittleRadius = 15.0;
+  static const headerCardRadius =
+      EdgeInsets.only(bottom: 20, left: 10, right: 10);
 
   ///-----------------MODEL LIST-----------------///
   static final modelList = [
