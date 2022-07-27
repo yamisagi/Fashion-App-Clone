@@ -40,7 +40,7 @@ class AvatarList extends StatelessWidget {
       child: CircleAvatar(
         foregroundImage: AssetImage(headerList[index].imagePath),
         radius: Constant.circleAvatarRadius,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
       ),
     );
   }

@@ -16,6 +16,7 @@ class ItemListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
+        backgroundColor: Colors.transparent,
         radius: Constant.circleAvatarMinRadius,
         backgroundImage: AssetImage(itemList[index].modelImage),
       ),

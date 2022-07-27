@@ -2,10 +2,10 @@ import 'package:fashion_app/model/item_model.dart';
 import 'package:fashion_app/product/detail_page_bottom.dart';
 import 'package:fashion_app/product/detail_page_button.dart';
 import 'package:fashion_app/product/detail_positioned.dart';
+import 'package:fashion_app/product/product_tooltip.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
-  
   final int index;
   final String heroTag;
   final List<ItemModel> itemList;
@@ -70,6 +70,9 @@ class _DetailPageState extends State<DetailPage> {
               ),
             ],
           ),
+          PositionedToolTip(
+            message: widget.itemList[widget.index].dressDescription,
+          )
         ],
       ),
     ));

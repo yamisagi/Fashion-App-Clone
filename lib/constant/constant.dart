@@ -38,6 +38,12 @@ class Constant {
     fontSize: 12,
     fontWeight: FontWeight.bold,
   );
+  static const positionedToolTipTextStyle = TextStyle(
+    color: Colors.white,
+    fontFamily: Constant.fontFamily,
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+  );
   static const centeredProfileMessage1 = Center(
     child: Text("You don't have any videos",
         style: TextStyle(
@@ -54,6 +60,17 @@ class Constant {
           fontSize: 15.0,
         )),
   );
+  static final positionedBoxDecoration = BoxDecoration(
+    borderRadius: BorderRadius.circular(50),
+    color: Colors.grey.withOpacity(0.5),
+  );
+  static final positionedTootipDecoration = BoxDecoration(
+    borderRadius: BorderRadius.circular(25),
+    gradient: LinearGradient(colors: <Color>[
+      Colors.black.withOpacity(0.5),
+      Colors.grey.withOpacity(0.5),
+    ]),
+  );
 
   ///-----------------COLOR-----------------///
   static final lightThemeIconColor = Colors.orange[400];
@@ -61,7 +78,7 @@ class Constant {
 
   ///-----------------RADIUS&PADDING-----------------///
   static const headerCardMargin = EdgeInsets.all(12);
-  static const headerCardPadding = EdgeInsets.all(5.0);
+  static const headerCardPadding = EdgeInsets.all(8.0);
   static const circleAvatarRadius = 50.0;
   static const circleAvatarLittleRadius = 15.0;
   static const circleAvatarMinRadius = 30.0;
@@ -74,36 +91,38 @@ class Constant {
   );
   static const spacer = SizedBox(height: 30.0);
   static final profileItemRadius = BorderRadius.circular(20.0);
+  static const positionedContainerWidth = 100.0;
+  static const positionedContainerHeight = 40.0;
 
   ///-----------------MODEL LIST-----------------///
   static final modelList = [
     HeaderModel(
-        imagePath: 'assets/ic_model1.jpeg',
+        imagePath: 'assets/ic_model6.jpg',
         title: 'Follow',
         littleImagePath: 'assets/ic_chanellogo.jpg',
         description: 'Lorem Ipsum'),
     HeaderModel(
-        imagePath: 'assets/ic_model2.jpeg',
+        imagePath: 'assets/ic_model5.jpeg',
         title: 'Follow',
         littleImagePath: 'assets/ic_louisvuitton.jpg',
         description: 'Lorem Pretty Lore'),
     HeaderModel(
-        imagePath: 'assets/ic_model3.jpeg',
+        imagePath: 'assets/ic_model4.jpg',
         title: 'Follow',
         littleImagePath: 'assets/ic_louisvuitton.jpg',
         description: 'Model is pretty sure what she is doing'),
     HeaderModel(
-        imagePath: 'assets/ic_model4.jpg',
+        imagePath: 'assets/ic_model3.jpeg',
         title: 'Follow',
         littleImagePath: 'assets/ic_chanellogo.jpg',
         description: 'Icon of fashion '),
     HeaderModel(
-        imagePath: 'assets/ic_model5.jpeg',
+        imagePath: 'assets/ic_model2.jpeg',
         title: 'Follow',
         littleImagePath: 'assets/ic_louisvuitton.jpg',
         description: 'Absolutely perfect '),
     HeaderModel(
-        imagePath: 'assets/ic_model6.jpg',
+        imagePath: 'assets/ic_model1.jpeg',
         title: 'Follow',
         littleImagePath: 'assets/ic_chanellogo.jpg',
         description: 'Lorem Ipsum')
@@ -114,11 +133,11 @@ class Constant {
         modelDescription: '5 min ago',
         modelImage: 'assets/ic_model5.jpeg',
         time: '5 min ago',
-        cardImage: cardItemImage,
+        cardImage: cardItemImage4,
         commentCount: '435',
         replyCount: '1.8K',
-        secondImage: cardItemImage2,
-        thirdImage: cardItemImage3,
+        secondImage: cardItemImage14,
+        thirdImage: cardItemImage6,
         uniqueId: '1',
         uniqueId2: 'a',
         uniqueId3: 'aa',
@@ -132,11 +151,11 @@ class Constant {
       modelDescription: '10 min ago',
       modelImage: 'assets/ic_model1.jpeg',
       time: '10 min ago',
-      cardImage: cardItemImage4,
+      cardImage: cardItemImage13,
       commentCount: '644',
       replyCount: '10K',
       secondImage: cardItemImage5,
-      thirdImage: cardItemImage6,
+      thirdImage: cardItemImage15,
       uniqueId: '2',
       uniqueId2: 'b',
       uniqueId3: 'bb',
@@ -189,11 +208,11 @@ class Constant {
       modelDescription: '40 min ago',
       modelImage: 'assets/ic_model4.jpg',
       time: '40 min ago',
-      cardImage: cardItemImage13,
+      cardImage: cardItemImage,
       commentCount: '543',
       replyCount: '1K',
-      secondImage: cardItemImage14,
-      thirdImage: cardItemImage15,
+      secondImage: cardItemImage2,
+      thirdImage: cardItemImage3,
       uniqueId: '5',
       uniqueId2: 'e',
       uniqueId3: 'ee',

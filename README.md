@@ -50,8 +50,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<!-- add asset here later -->
-<!--<img src="https://github.com/yamisagi/us/blob/main/assets/product.gif" width="350" height="550"> -->
+
+<video src="https://github.com/yamisagi/Fashion-App-Clone/blob/main/assets/product.mp4" width="350" height="650">
 
 
 In this project, I am trying to create a clone Fashion App.
@@ -76,16 +76,9 @@ In this project, I am trying to create a clone Fashion App.
 * [x] Improved [ProductNavBar](lib/widget/product_nav_bar.dart) to navigate to [ProfilePage](lib/page/profile_page.dart)
 * [x] Created [ProfilePage](lib/page/profile_page.dart) 
 * [x] Improved all the code in [ProfilePage](lib/page/profile_page.dart) with seperated files.
-* [x] Clened up code.
-  
-  - Almost Done :) 
-
-  - I will update this later
-
-
-
-
-<p align="center">(Still working on it...)</p>
+* [x] Added [PositionedToolTip](lib/product/positioned_tooltip.dart)
+* [x] Cleaned up code.
+  - Done 🤗 
 
 
 
