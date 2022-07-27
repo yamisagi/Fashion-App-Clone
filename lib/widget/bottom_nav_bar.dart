@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+import 'package:fashion_app/constant/constant.dart';
 import 'package:flutter/material.dart';
 
 class ProductNavBar extends StatefulWidget {
@@ -19,6 +21,7 @@ class ProductNavBarState extends State<ProductNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      selectedLabelStyle: Constant.bottomBarStyle,
       elevation: 0,
       type: BottomNavigationBarType.shifting,
       unselectedIconTheme: IconThemeData(color: widget.fixedColor),

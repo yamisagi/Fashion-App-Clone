@@ -74,6 +74,9 @@ In this project, I am trying to create a clone Fashion App.
 * [x] Created [DetailPage](lib/page/detail_page.dart)
 * [x] Improved Hero Animation in [DetailPage](lib/page/detail_page.dart)
 * [x] Improved [ProductNavBar](lib/widget/product_nav_bar.dart) to navigate to [ProfilePage](lib/page/profile_page.dart)
+* [x] Created [ProfilePage](lib/page/profile_page.dart) 
+* [x] Improved all the code in [ProfilePage](lib/page/profile_page.dart) with seperated files.
+* [x] Clened up code.
   
   - Almost Done :) 
 

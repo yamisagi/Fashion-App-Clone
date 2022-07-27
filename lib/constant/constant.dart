@@ -25,12 +25,6 @@ class Constant {
   static const cardItemImage16 = 'assets/ic_modelgrid16.jpeg';
   static const cardItemImage17 = 'assets/ic_modelgrid17.jpeg';
   static const cardItemImage18 = 'assets/ic_modelgrid18.jpeg';
-  static const dress = 'assets/ic_dress1.jpg';
-  static const dress2 = 'assets/ic_dress2.jpg';
-  static const dress3 = 'assets/ic_dress3.jpg';
-  static const dress4 = 'assets/ic_dress4.jpg';
-  static const dress5 = 'assets/ic_dress5.jpg';
-  static const dress6 = 'assets/ic_dress6.jpg';
 
   ///-----------------STYLE-----------------///
   static const headerFontStyle = TextStyle(
@@ -39,6 +33,27 @@ class Constant {
       TextStyle(fontWeight: FontWeight.bold, fontFamily: Constant.fontFamily);
   static const followButtonDescriptionFontStyle =
       TextStyle(fontWeight: FontWeight.w600, fontFamily: Constant.fontFamily);
+  static const bottomBarStyle = TextStyle(
+    fontFamily: Constant.fontFamily,
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  );
+  static const centeredProfileMessage1 = Center(
+    child: Text("You don't have any videos",
+        style: TextStyle(
+          fontFamily: Constant.fontFamily,
+          fontWeight: FontWeight.w800,
+          fontSize: 15.0,
+        )),
+  );
+  static const centeredProfileMessage2 = Center(
+    child: Text("You don't have any tagged",
+        style: TextStyle(
+          fontFamily: Constant.fontFamily,
+          fontWeight: FontWeight.w800,
+          fontSize: 15.0,
+        )),
+  );
 
   ///-----------------COLOR-----------------///
   static final lightThemeIconColor = Colors.orange[400];
@@ -57,6 +72,8 @@ class Constant {
     color: Colors.white,
     borderRadius: BorderRadius.circular(10),
   );
+  static const spacer = SizedBox(height: 30.0);
+  static final profileItemRadius = BorderRadius.circular(20.0);
 
   ///-----------------MODEL LIST-----------------///
   static final modelList = [
@@ -105,12 +122,11 @@ class Constant {
         uniqueId: '1',
         uniqueId2: 'a',
         uniqueId3: 'aa',
-        dress: dress,
-        dressTitle: 'Jeans',
+        dressTitle: 'Nulla Aliquet',
         dressPrice: '\$100',
         dressSubtitle: 'Lorem Ipsum',
         dressDescription:
-            'Jeans are a very popular style of clothing in the United States and many other countries. '),
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
     ItemModel(
       modelName: 'Sarah',
       modelDescription: '10 min ago',
@@ -124,10 +140,9 @@ class Constant {
       uniqueId: '2',
       uniqueId2: 'b',
       uniqueId3: 'bb',
-      dress: dress2,
-      dressTitle: 'Black Hat',
+      dressTitle: 'Mi Proin',
       dressDescription:
-          'Hat is a piece of clothing worn by an individual to cover the head. ',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       dressPrice: '\$10',
       dressSubtitle: 'Lorem Ipsum',
     ),
@@ -144,10 +159,9 @@ class Constant {
       uniqueId: '3',
       uniqueId2: 'c',
       uniqueId3: 'cc',
-      dress: dress3,
-      dressTitle: 'Pink T-Shirt',
+      dressTitle: 'Purus Faucibus',
       dressDescription:
-          'T-shirt is a style of fabric shirt that is made with a single color.  ',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ',
       dressPrice: '\$20',
       dressSubtitle: 'Lorem Ipsum',
     ),
@@ -164,10 +178,9 @@ class Constant {
       uniqueId: '4',
       uniqueId2: 'd',
       uniqueId3: 'dd',
-      dress: dress4,
-      dressTitle: 'Yellow Sweatpants',
+      dressTitle: 'Naucibus Nisl',
       dressDescription:
-          'Sweatpants are a style of clothing that is made from a flexible fabric. It is typically made of a cotton or polyester fiber. ',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       dressPrice: '\$50',
       dressSubtitle: 'Lorem Ipsum',
     ),
@@ -184,10 +197,9 @@ class Constant {
       uniqueId: '5',
       uniqueId2: 'e',
       uniqueId3: 'ee',
-      dress: dress5,
-      dressTitle: 'White Jacket',
+      dressTitle: 'Enim Neque',
       dressDescription:
-          'Jacket is a piece of clothing worn by an individual to cover the body. ',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       dressPrice: '\$200',
       dressSubtitle: 'Lorem Ipsum',
     ),
@@ -204,10 +216,9 @@ class Constant {
       uniqueId: '6',
       uniqueId2: 'f',
       uniqueId3: 'ff',
-      dress: dress6,
-      dressTitle: 'White Shirt',
+      dressTitle: 'Odio Aenean',
       dressDescription:
-          'Shirt is a style of clothing that is made from a flexible material. ',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       dressPrice: '\$200',
       dressSubtitle: 'Lorem Ipsum',
     ),

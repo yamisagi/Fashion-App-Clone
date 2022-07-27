@@ -4,7 +4,8 @@ import 'package:fashion_app/theme/theme.dart';
 import 'package:fashion_app/page/main_screen.dart';
 import 'package:fashion_app/widget/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
+import 'product/product_appbar.dart';
 
 void main() => runApp(const FashionApp());
 
@@ -16,11 +17,15 @@ class FashionApp extends StatefulWidget {
 }
 
 class _FashionAppState extends State<FashionApp> {
-  Icon darkIcon = const Icon(Icons.dark_mode);
-  Icon lightIcon = const Icon(Icons.light_mode);
-  bool _darkTheme = true;
+  bool _darkTheme = false;
   int _currentIndex = 0;
-  List<Widget> pages = [MainScreen(), const ProfilePage()];
+
+  List<Widget> pages = [
+    MainScreen(),
+    ProfilePage(
+      itemList: Constant.itemList,
+    )
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -38,21 +43,13 @@ class _FashionAppState extends State<FashionApp> {
               ? Constant.darkThemeIconColor
               : Constant.lightThemeIconColor,
         ),
-        appBar: AppBar(
-          systemOverlayStyle: _darkTheme
-              ? SystemUiOverlayStyle.light
-              : SystemUiOverlayStyle.dark,
-          title: Constant.appBarTitle,
-          actions: [
-            IconButton(
-              icon: _darkTheme ? lightIcon : darkIcon,
-              onPressed: () {
-                setState(() {
-                  _darkTheme = !_darkTheme;
-                });
-              },
-            ),
-          ],
+        appBar: ProductAppBar(
+          func: () {
+            setState(() {
+              _darkTheme = !_darkTheme;
+            });
+          },
+          isDarkTheme: _darkTheme,
         ),
         body: pages[_currentIndex],
       ),

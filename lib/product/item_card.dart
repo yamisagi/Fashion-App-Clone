@@ -18,8 +18,9 @@ class ItemCard extends StatelessWidget {
       height: boxHeight,
       width: boxWidth,
       child: Card(
+        elevation: 5,
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        color: Colors.black,
+        color: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
