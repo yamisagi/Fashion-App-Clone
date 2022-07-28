@@ -7,12 +7,10 @@ import 'package:flutter/material.dart';
 class ItemListTile extends StatelessWidget {
   const ItemListTile({
     Key? key,
-    required this.itemList,
-    required this.index,
+    required this.item,
   }) : super(key: key);
 
-  final List<ItemModel> itemList;
-  final int index;
+  final ItemModel item;
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +18,17 @@ class ItemListTile extends StatelessWidget {
       leading: CircleAvatar(
         backgroundColor: ProductColors.circleAvatarBackground,
         radius: ProductValues.circleAvatarMinRadius,
-        backgroundImage: AssetImage(itemList[index].modelImage),
+        backgroundImage: AssetImage(item.modelImage),
       ),
       title: Text(
-        itemList[index].modelName,
+        item.modelName,
         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontWeight: FontWeight.bold,
               fontFamily: Constant.fontFamily,
             ),
       ),
       subtitle: Text(
-        itemList[index].modelDescription,
+        item.modelDescription,
         style: Theme.of(context).textTheme.bodySmall?.copyWith(
               fontWeight: FontWeight.w600,
               fontFamily: Constant.fontFamily,

@@ -5,7 +5,6 @@ import 'package:fashion_app/product/item_card.dart';
 import 'package:fashion_app/product/item_listtile.dart';
 import 'package:flutter/material.dart';
 
-
 class ItemListBuilder extends StatefulWidget {
   final List<ItemModel> itemList;
   const ItemListBuilder({
@@ -30,8 +29,7 @@ class _ItemListBuilderState extends State<ItemListBuilder> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ItemListTile(
-                itemList: widget.itemList,
-                index: index,
+                item: widget.itemList[index],
               ),
               Row(
                 children: [
