@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<video src="https://github.com/yamisagi/Fashion-App-Clone/blob/main/assets/product.mp4" width="350" height="650">
+https://user-images.githubusercontent.com/84624853/181474536-3d1ac7cf-cdd2-497c-a9cf-3b9eac708e71.mp4
 
 
 In this project, I am trying to create a clone Fashion App.
