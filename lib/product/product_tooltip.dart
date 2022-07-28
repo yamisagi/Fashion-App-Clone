@@ -1,4 +1,6 @@
+import 'package:fashion_app/constant/color_constant.dart';
 import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:flutter/material.dart';
 
 class PositionedToolTip extends StatelessWidget {
@@ -11,39 +13,43 @@ class PositionedToolTip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: MediaQuery.of(context).size.height * 0.4,  
+      top: MediaQuery.of(context).size.height * 0.4,
       left: MediaQuery.of(context).size.width / 2 - 175,
       child: Container(
-        width: Constant.positionedContainerWidth,
-        height: Constant.positionedContainerHeight,
-        decoration: Constant.positionedBoxDecoration,
+        width: ProductValues.positionedToolTipWidth,
+        height: ProductValues.positionedToolTipHeight,
+        decoration: ProductValues.positionedBoxDecoration,
         child: Tooltip(
           //triggerMode: TooltipTriggerMode.tap,
           message: message,
-          decoration: Constant.positionedTootipDecoration,
-          padding: Constant.headerCardPadding,
-          textStyle: Constant.positionedToolTipTextStyle,
-          showDuration: const Duration(seconds: 2),
-          waitDuration: const Duration(seconds: 1),
+          decoration: ProductValues.positionedTootipDecoration,
+          padding: ProductValues.headerCardPadding,
+          textStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
+                fontFamily: Constant.fontFamily,
+                fontWeight: FontWeight.bold,
+                color: ProductColors.white,
+              ),
+          showDuration: Constant.toolTipShowDuration,
+          waitDuration: Constant.toolTipWaitDuration,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: const [
+            children: [
               Padding(
-                padding: Constant.headerCardPadding,
+                padding: ProductValues.headerCardPadding,
                 child: Text(
-                  'Details',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: Constant.fontFamily,
-                    fontSize: 18,
-                  ),
+                  Constant.detailsHeader,
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                        fontSize: ProductValues.positionedToolTipTextSize,
+                        color: ProductColors.detailToolTipBackground,
+                        fontFamily: Constant.fontFamily,
+                      ),
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_drop_down_sharp,
-                color: Colors.white,
-                size: 20,
+                color: ProductColors.detailToolTipBackground,
+                size: ProductValues.positionedToolTipIconSize,
               ),
             ],
           ),

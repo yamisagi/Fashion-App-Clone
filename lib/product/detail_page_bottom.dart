@@ -1,3 +1,5 @@
+import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:fashion_app/widget/dress_card.dart';
 import 'package:flutter/material.dart';
 
@@ -20,18 +22,22 @@ class DetailPageBottom extends StatelessWidget {
       children: [
         DressCard(imagePath: imagePath),
         SizedBox(
-          width: 200,
+          width: ProductValues.dressCardWidth,
           child: Column(
             children: [
               customText(
-                  text: dressTitle, fontSize: 20, textColor: Colors.black),
+                context: context,
+                text: dressTitle,
+                fontSize: 20,
+                textColor: Colors.black,
+              ),
               customText(
+                context: context,
                 text: dressSubTitle,
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              ProductValues.textSpacer,
               customText(
+                context: context,
                 text: dressDescription,
               ),
             ],
@@ -45,15 +51,16 @@ class DetailPageBottom extends StatelessWidget {
     required String text,
     double fontSize = 15,
     Color? textColor = Colors.grey,
+    required BuildContext context,
   }) {
     return Text(
       text,
-      style: TextStyle(
-        overflow: TextOverflow.ellipsis,
-        fontSize: fontSize,
-        fontWeight: FontWeight.bold,
-        color: textColor,
-      ),
+      style: Theme.of(context).textTheme.headline4?.copyWith(
+          fontSize: fontSize,
+          fontWeight: FontWeight.bold,
+          fontFamily: Constant.fontFamily,
+          color: textColor,
+          overflow: TextOverflow.ellipsis),
     );
   }
 }

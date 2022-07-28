@@ -1,4 +1,4 @@
-import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:flutter/material.dart';
 
 class ItemCard extends StatelessWidget {
@@ -18,14 +18,13 @@ class ItemCard extends StatelessWidget {
       height: boxHeight,
       width: boxWidth,
       child: Card(
-        elevation: 5,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         color: Colors.transparent,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: ProductValues.profileItemRadius,
         ),
         borderOnForeground: true,
-        margin: Constant.itemPadding,
+        margin: ProductValues.itemPadding,
         child: Image.asset(
           itemImagePath,
           fit: BoxFit.cover,

@@ -1,5 +1,9 @@
+import 'package:fashion_app/constant/color_constant.dart';
 import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/asset_constants.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:fashion_app/model/item_model.dart';
+import 'package:fashion_app/product/profile_grid.dart';
 import 'package:fashion_app/product/profile_item.dart';
 import 'package:flutter/material.dart';
 
@@ -26,41 +30,40 @@ class _ProfilePageState extends State<ProfilePage>
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Constant.spacer,
+        ProductValues.spacer,
         const CircleAvatar(
-          backgroundImage: AssetImage(Constant.avatarImage),
-          radius: 50,
+          backgroundImage: AssetImage(AssetConstant.avatarImage),
+          radius: ProductValues.profileImageRadius,
         ),
-        Constant.spacer,
-        const Text(
-          "@scarlettj",
-          style: TextStyle(
-            fontFamily: Constant.fontFamily,
-            fontWeight: FontWeight.w800,
-            fontSize: 25.0,
-          ),
+        ProductValues.spacer,
+        Text(
+          Constant.accountName,
+          style: Theme.of(context).textTheme.headline5?.copyWith(
+                fontWeight: FontWeight.bold,
+                fontFamily: Constant.fontFamily,
+              ),
         ),
-        Constant.spacer,
+        ProductValues.spacer,
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: const [
-            SizedBox(width: 20.0),
+            ProductValues.profileBarSpacer,
             ColumnItems(
-              count: '1.4K',
-              text: 'Following',
+              count: Constant.followingCount,
+              text: Constant.following,
             ),
             ColumnItems(
-              count: '5M',
-              text: 'Followers',
+              count: Constant.followersCount,
+              text: Constant.followers,
             ),
             ColumnItems(
-              count: '17M',
-              text: 'Like',
+              count: Constant.likesCount,
+              text: Constant.likes,
             ),
-            SizedBox(width: 20.0),
+            ProductValues.profileBarSpacer,
           ],
         ),
-        Constant.spacer,
+        ProductValues.spacer,
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -68,52 +71,52 @@ class _ProfilePageState extends State<ProfilePage>
               isScrollable: true,
               controller: tabController,
               indicator: const BoxDecoration(borderRadius: BorderRadius.zero),
-              labelColor: Colors.grey,
-              labelStyle:
-                  const TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+              labelColor: ProductColors.labelColor,
+              labelStyle: Theme.of(context).textTheme.headline5?.copyWith(
+                    fontFamily: Constant.fontFamily,
+                    fontWeight: FontWeight.bold,
+                  ),
               onTap: (tapIndex) {
                 setState(() {
                   selectedIndex = tapIndex;
                 });
               },
-              tabs: const [
-                Tab(text: "Photos"),
-                Tab(text: "Video"),
-                Tab(text: "Tagged"),
-              ],
+              tabs: AssetConstant.tabList,
             ),
           ],
         ),
-        const SizedBox(height: 10.0),
         Expanded(
           child: TabBarView(
             controller: tabController,
             children: [
-              GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisExtent: 250.0, crossAxisCount: 3),
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: Constant.headerCardPadding,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: Constant.profileItemRadius,
-                        image: DecorationImage(
-                          image: AssetImage(widget.itemList[index].cardImage),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  );
-                },
+              ProfileGrid(
                 itemCount: widget.itemList.length,
+                imagePath: widget.itemList,
               ),
-              Constant.centeredProfileMessage1,
-              Constant.centeredProfileMessage2,],
+              centeredMessage(
+                context,
+                message: Constant.vidMessage,
+              ),
+              centeredMessage(
+                context,
+                message: Constant.tagMessage,
+              ),
+            ],
           ),
         )
       ],
+    );
+  }
+
+  Center centeredMessage(BuildContext context, {required String message}) {
+    return Center(
+      child: Text(
+        message,
+        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              fontFamily: Constant.fontFamily,
+              fontWeight: FontWeight.bold,
+            ),
+      ),
     );
   }
 }

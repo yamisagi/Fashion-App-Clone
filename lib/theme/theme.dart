@@ -24,7 +24,7 @@ class ProductTheme {
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     useMaterial3: true,
     cardTheme: CardTheme(
-      elevation: 2,
+      elevation: 5,
       color: Colors.orange[100],
     ),
     appBarTheme: AppBarTheme(

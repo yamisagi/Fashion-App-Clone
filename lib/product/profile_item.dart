@@ -1,3 +1,5 @@
+import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:flutter/material.dart';
 
 class ColumnItems extends StatelessWidget {
@@ -16,15 +18,18 @@ class ColumnItems extends StatelessWidget {
       children: [
         Text(
           count,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20.0,
-          ),
+          style: Theme.of(context).textTheme.headline5?.copyWith(
+                fontWeight: FontWeight.bold,
+                fontFamily: Constant.fontFamily,
+              ),
         ),
-        const SizedBox(height: 15.0),
+       ProductValues.spacer,
         Text(
           text,
-          style: const TextStyle(fontSize: 20.0, fontWeight: FontWeight.w300),
+          style: Theme.of(context).textTheme.headline6?.copyWith(
+                fontWeight: FontWeight.w300,
+                fontFamily: Constant.fontFamily,
+              ),
         ),
       ],
     );

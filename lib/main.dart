@@ -1,4 +1,5 @@
-import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/color_constant.dart';
+import 'package:fashion_app/constant/asset_constants.dart';
 import 'package:fashion_app/page/profile_page.dart';
 import 'package:fashion_app/theme/theme.dart';
 import 'package:fashion_app/page/main_screen.dart';
@@ -23,7 +24,7 @@ class _FashionAppState extends State<FashionApp> {
   List<Widget> pages = [
     MainScreen(),
     ProfilePage(
-      itemList: Constant.itemList,
+      itemList: AssetConstant.itemList,
     )
   ];
   @override
@@ -40,8 +41,8 @@ class _FashionAppState extends State<FashionApp> {
             });
           },
           fixedColor: _darkTheme
-              ? Constant.darkThemeIconColor
-              : Constant.lightThemeIconColor,
+              ? ProductColors.darkThemeIconColor
+              : ProductColors.lightThemeIconColor,
         ),
         appBar: ProductAppBar(
           func: () {

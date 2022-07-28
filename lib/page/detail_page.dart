@@ -1,3 +1,5 @@
+import 'package:fashion_app/constant/color_constant.dart';
+import 'package:fashion_app/constant/constant.dart';
 import 'package:fashion_app/model/item_model.dart';
 import 'package:fashion_app/product/detail_page_bottom.dart';
 import 'package:fashion_app/product/detail_page_button.dart';
@@ -27,7 +29,7 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Dismissible(
-      resizeDuration: const Duration(milliseconds: 5),
+      resizeDuration: Constant.dismissDuration,
       behavior: HitTestBehavior.translucent,
       direction: DismissDirection.down,
       onDismissed: (direction) {
@@ -62,8 +64,7 @@ class _DetailPageState extends State<DetailPage> {
                 dressSubTitle: widget.itemList[widget.index].dressSubtitle,
               ),
               const Divider(
-                thickness: 1,
-                color: Colors.grey,
+                color: ProductColors.profileDividerColor,
               ),
               DetailPageButton(
                 dressPrice: widget.itemList[widget.index].dressPrice,

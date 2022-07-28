@@ -1,4 +1,6 @@
+import 'package:fashion_app/constant/color_constant.dart';
 import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:fashion_app/model/item_model.dart';
 import 'package:flutter/material.dart';
 
@@ -16,17 +18,23 @@ class ItemListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
-        backgroundColor: Colors.transparent,
-        radius: Constant.circleAvatarMinRadius,
+        backgroundColor: ProductColors.circleAvatarBackground,
+        radius: ProductValues.circleAvatarMinRadius,
         backgroundImage: AssetImage(itemList[index].modelImage),
       ),
       title: Text(
         itemList[index].modelName,
-        style: Constant.followButtonHeaderFontStyle,
+        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              fontWeight: FontWeight.bold,
+              fontFamily: Constant.fontFamily,
+            ),
       ),
       subtitle: Text(
         itemList[index].modelDescription,
-        style: Constant.followButtonDescriptionFontStyle,
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              fontWeight: FontWeight.w600,
+              fontFamily: Constant.fontFamily,
+            ),
       ),
       trailing: IconButton(
         icon: const Icon(Icons.more_vert),

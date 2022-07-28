@@ -1,4 +1,5 @@
 import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:fashion_app/model/header_model.dart';
 import 'package:flutter/material.dart';
 
@@ -36,10 +37,10 @@ class AvatarList extends StatelessWidget {
 
   Padding _mainAvatar(int index) {
     return Padding(
-      padding: Constant.headerCardPadding,
+      padding: ProductValues.headerCardPadding,
       child: CircleAvatar(
         foregroundImage: AssetImage(headerList[index].imagePath),
-        radius: Constant.circleAvatarRadius,
+        radius: ProductValues.circleAvatarRadius,
         backgroundColor: Colors.transparent,
       ),
     );
@@ -50,7 +51,7 @@ class AvatarList extends StatelessWidget {
       bottom: 0,
       right: 0,
       child: CircleAvatar(
-        radius: Constant.circleAvatarLittleRadius,
+        radius: ProductValues.circleAvatarLittleRadius,
         backgroundImage: AssetImage(headerList[index].littleImagePath),
       ),
     );
@@ -62,12 +63,15 @@ class AvatarList extends StatelessWidget {
           context: context, builder: ((context) => _dialog(index, context)))),
       child: Card(
         elevation: 0,
-        margin: Constant.headerCardMargin,
+        margin: ProductValues.itemPadding,
         child: Padding(
-          padding: Constant.headerCardPadding,
+          padding: ProductValues.headerCardPadding,
           child: Text(
             headerList[index].title,
-            style: Constant.headerFontStyle,
+            style: Theme.of(context).textTheme.headline6?.copyWith(
+                  fontFamily: Constant.fontFamily,
+                  fontWeight: FontWeight.w500,
+                ),
           ),
         ),
       ),
@@ -76,17 +80,25 @@ class AvatarList extends StatelessWidget {
 
   _dialog(int index, BuildContext context) {
     return AlertDialog(
-      title: Text('${headerList[index].title}ed',
-          textAlign: TextAlign.center,
-          style: Constant.followButtonHeaderFontStyle),
+      title: Text(
+        '${headerList[index].title}ed',
+        textAlign: TextAlign.center,
+        style: Theme.of(context).textTheme.headline5?.copyWith(
+              fontWeight: FontWeight.bold,
+              fontFamily: Constant.fontFamily,
+            ),
+      ),
       content: Text(
         headerList[index].description,
-        style: Constant.followButtonDescriptionFontStyle,
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              fontWeight: FontWeight.w600,
+              fontFamily: Constant.fontFamily,
+            ),
       ),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text('Close'),
+          child: const Text(Constant.close),
         ),
       ],
     );

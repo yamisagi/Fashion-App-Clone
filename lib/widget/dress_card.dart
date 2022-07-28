@@ -1,4 +1,4 @@
-import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:flutter/material.dart';
 
 class DressCard extends StatelessWidget {
@@ -11,10 +11,10 @@ class DressCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: Constant.headerCardPadding,
+      padding: ProductValues.headerCardPadding,
       child: Container(
-        margin: Constant.headerCardMargin,
-        padding: Constant.headerCardMargin,
+        margin: ProductValues.itemPadding,
+        padding: ProductValues.itemPadding,
         height: 120,
         width: 100,
         decoration: BoxDecoration(

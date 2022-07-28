@@ -1,30 +1,31 @@
+import 'package:fashion_app/constant/product_values.dart';
+import 'package:fashion_app/model/item_model.dart';
 import 'package:flutter/material.dart';
 
 class ProfileGrid extends StatelessWidget {
   final int itemCount;
-  final String imagePath;
-  final int indexC;
+  final List<ItemModel> imagePath;
   const ProfileGrid({
     Key? key,
     required this.itemCount,
     required this.imagePath,
-    required this.indexC,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          mainAxisExtent: 250.0, crossAxisCount: 3),
-      itemBuilder: (context, indexC) {
+        mainAxisExtent: ProductValues.gridExtendValue,
+        crossAxisCount: ProductValues.gridCrossAxisCount,
+      ),
+      itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: ProductValues.headerCardPadding,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: ProductValues.profileItemRadius,
               image: DecorationImage(
-                image: AssetImage(imagePath),
+                image: AssetImage(imagePath[index].cardImage),
                 fit: BoxFit.cover,
               ),
             ),

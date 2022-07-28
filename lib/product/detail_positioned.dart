@@ -1,4 +1,4 @@
-import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:flutter/material.dart';
 
 class DetailPositioned extends StatelessWidget {
@@ -11,13 +11,13 @@ class DetailPositioned extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 15,
-      left: 15,
-      right: 15,
+      bottom: ProductValues.positionValue,
+      left: ProductValues.positionValue,
+      right: ProductValues.positionValue,
       child: Container(
-        height: 225,
+        height: ProductValues.positionedContainerHeight,
         width: MediaQuery.of(context).size.width - 30,
-        decoration: Constant.positionedDecoration,
+        decoration: ProductValues.positionedDecoration,
         child: Column(
           children: children,
         ),

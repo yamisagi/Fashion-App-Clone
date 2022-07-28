@@ -21,7 +21,6 @@ class ProductNavBarState extends State<ProductNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedLabelStyle: Constant.bottomBarStyle,
       elevation: 0,
       type: BottomNavigationBarType.shifting,
       unselectedIconTheme: IconThemeData(color: widget.fixedColor),
@@ -31,11 +30,11 @@ class ProductNavBarState extends State<ProductNavBar> {
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: 'Home',
+          label: Constant.home,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
-          label: 'Profile',
+          label: Constant.profile,
         ),
       ],
     );

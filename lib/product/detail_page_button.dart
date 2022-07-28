@@ -1,4 +1,6 @@
+import 'package:fashion_app/constant/color_constant.dart';
 import 'package:fashion_app/constant/constant.dart';
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:flutter/material.dart';
 
 class DetailPageButton extends StatelessWidget {
@@ -17,22 +19,20 @@ class DetailPageButton extends StatelessWidget {
       children: [
         Text(
           dressPrice,
-          style: TextStyle(
-              fontFamily: Constant.fontFamily,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.grey[700]),
+          style: Theme.of(context).textTheme.headline4?.copyWith(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                fontFamily: Constant.fontFamily,
+              ),
         ),
-        const SizedBox(
-          width: 10,
-        ),
+        ProductValues.spacer,
         IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
             icon: const Icon(
               Icons.arrow_forward_ios_outlined,
-              color: Colors.grey,
+              color: ProductColors.bottomButtonColor,
             )),
       ],
     );

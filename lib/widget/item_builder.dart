@@ -1,10 +1,10 @@
+import 'package:fashion_app/constant/product_values.dart';
 import 'package:fashion_app/model/item_model.dart';
 import 'package:fashion_app/page/detail_page.dart';
 import 'package:fashion_app/product/item_card.dart';
 import 'package:fashion_app/product/item_listtile.dart';
 import 'package:flutter/material.dart';
 
-import '../constant/constant.dart';
 
 class ItemListBuilder extends StatefulWidget {
   final List<ItemModel> itemList;
@@ -22,7 +22,7 @@ class _ItemListBuilderState extends State<ItemListBuilder> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: Constant.headerCardRadius,
+      padding: ProductValues.headerCardRadius,
       itemBuilder: ((context, index) {
         return Card(
           elevation: 0,
