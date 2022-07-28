@@ -1,3 +1,4 @@
+import 'package:fashion_app/constant/color_constant.dart';
 import 'package:fashion_app/constant/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,8 +19,6 @@ class ProductAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _ProductAppBarState extends State<ProductAppBar> {
   @override
   Widget build(BuildContext context) {
-    Icon darkIcon = const Icon(Icons.dark_mode);
-    Icon lightIcon = const Icon(Icons.light_mode);
     return AppBar(
       systemOverlayStyle: widget.isDarkTheme
           ? SystemUiOverlayStyle.light
@@ -27,7 +26,7 @@ class _ProductAppBarState extends State<ProductAppBar> {
       title: Constant.appBarTitle,
       actions: [
         IconButton(
-          icon: widget.isDarkTheme ? lightIcon : darkIcon,
+          icon: iconSet(),
           onPressed: () {
             setState(() {
               widget.isDarkTheme = !widget.isDarkTheme;
@@ -37,5 +36,13 @@ class _ProductAppBarState extends State<ProductAppBar> {
         ),
       ],
     );
+  }
+
+  iconSet() {
+    if (widget.isDarkTheme) {
+      return ProductColors.lightIcon;
+    } else {
+      return ProductColors.darkIcon;
+    }
   }
 }
